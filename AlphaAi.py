@@ -43,6 +43,7 @@ def take_command():
             if 'alpha' in command:
                 talk("Yes, I am listening")
                 return command.replace('alpha', '').strip()
+            return command  # Allow general conversation
     except:
         return ""
     return ""
@@ -133,7 +134,7 @@ def run_alpha(command):
     elif 'open' in command:
         open_application(command)
     else:
-        talk("Let me check that for you.")
+        talk("Let's have a conversation.")
         response = ask_openai(command)
         talk(response)
 
