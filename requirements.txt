@@ -1,0 +1,11 @@
+kivy
+speechrecognition
+gtts
+wikipedia
+pyjokes
+pywhatkit
+requests
+openai
+playsound
+datetime
+pyinstaller
