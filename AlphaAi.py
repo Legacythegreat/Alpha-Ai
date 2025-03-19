@@ -21,7 +21,7 @@ import subprocess
 listener = sr.Recognizer()
 
 # OpenAI API Key
-openai.api_key = "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"
+openai.api_key = "YOUR_CHATGPT_KEY"
 
 # Function to speak with gTTS
 def talk(text):
@@ -50,7 +50,7 @@ def take_command():
 
 # Get Weather Information
 def get_weather():
-    api_key = "7fb09907406407fd4ab4790efbade607"
+    api_key = "YOUR_OPENWEATHER_KEY"
     city = "Ruiru,Kenya"
     url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
     response = requests.get(url).json()
@@ -64,7 +64,7 @@ def get_weather():
 # Fetch News
 def get_news():
     talk("Fetching the latest news headlines.")
-    url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=00ddfde1d6e64e748870a5ac781deb18"
+    url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=YOUR_NEWSAPI_KEY"
     response = requests.get(url).json()
     articles = response["articles"][:5]
     for article in articles:
